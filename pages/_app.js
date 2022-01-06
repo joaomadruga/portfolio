@@ -46,8 +46,8 @@ export default function App({ Component, pageProps }) {
 
           {/* Open Graph */}
           <meta property="og:url" content={"https://portfolio-joaomadruga.vercel.app/"} key="ogurl" />
-          <meta property="og:image" content="https://portfolio-joaomadruga.vercel.app/ogImage.svg"/>
-          <meta property="og:image:type" content="image/svg"/>
+          <meta property="og:image" content="https://portfolio-joaomadruga.vercel.app/ogImage.png"/>
+          <meta property="og:image:type" content="image/png"/>
           <meta property="og:image:width" content="300"/>
           <meta property="og:image:height" content="300"/>
           <meta property="og:site_name" content={"Portfólio - João Madruga"} key="ogsitename" />

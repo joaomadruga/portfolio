@@ -39,16 +39,29 @@ export default function App({ Component, pageProps }) {
   return (
     <>
         <Head>
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary" key="twcard" />
+          <meta name="twitter:creator" content={"@joaomadruga"} key="twhandle" />
+
+          {/* Open Graph */}
+          <meta property="og:url" content={"https://portfolio-joaomadruga.vercel.app/"} key="ogurl" />
+          <meta property="og:image" content={"/iconWebsite.svg"} key="ogimage" />
+          <meta property="og:site_name" content={"Portfolio - João Madruga"} key="ogsitename" />
+          <meta property="og:title" content={"home"} key="ogtitle" />
+          <meta property="og:description" content={"Portfolio que conta a história de João Madruga no mundo dev."} key="ogdesc" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
           <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+          
           <meta name="theme-color" content="#000" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
           <link rel="icon" href="/iconWebsite.svg" />
-          {
-          //<meta name="description" content=""/>
-          //<meta name="keywords" content=""/>
-          }
+          
+          <meta name="description" content="Portfolio que conta a história de João Madruga no mundo dev."/>
+          <meta name="keywords" content="portfolio, joao madruga portfolio, joao madruga"/>
+          
           <title>Portfolio - João Madruga</title>
         </Head>
         <GlobalStyle />

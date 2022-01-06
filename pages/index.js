@@ -178,7 +178,7 @@ export default function Home() {
                 <div 
                 className={isMouseOver == true && animateSocialMediaDiv == 'in' ? 'spinImage' : ''}
                 style={{display:'flex', alignItems:'center', justifyContent:'center', backgroundColor: 'white', borderRadius:'50%'}}>
-                  <Image src='/AppleSmilingCharacter.png' width={60} height={60}></Image>
+                  <Image src='/AppleSmilingCharacter.png' width={60} height={60} alt='João Madruga Apple Character'></Image>
                 </div>
               </div>
               <NavHeader className='animate__animated animate__fadeInDown'>
@@ -193,18 +193,18 @@ export default function Home() {
             onMouseLeave={() => showSocialMedia(false)} onMouseOver={() => showSocialMedia(true)}
             >
                 <div>
-                  <Image src='/bubble.svg' width={200} height={100} />
+                  <Image src='/bubble.svg' width={200} height={100} alt='bubble' />
                 </div>
                 <div style={{position:'absolute', top: '32%', left: '12%'}}>
                   <a href='https://github.com/joaomadruga' target="_blank" style={{display: 'flex', textDecoration: 'none', color:'#000', alignItems: 'center', justifyContent: 'center', marginBottom: '4px'}}>
                   <div style={{display: 'flex'}}>
-                    <Image src={'/github.svg'} width={30} height={30} />
+                    <Image src={'/github.svg'} width={30} height={30} alt='Github logo' />
                   </div>
                   <BoxSocialMediaText>/joaomadruga</BoxSocialMediaText>
                   </a>
                   <a href='https://www.linkedin.com/in/joao-madruga' target="_blank" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', color:'#000'}}>
                   <div style={{display: 'flex'}}>
-                    <Image src={'/linkedin.svg'} width={30} height={30} />
+                    <Image src={'/linkedin.svg'} width={30} height={30} alt='Linkedin logo'/>
                   </div>
                   <BoxSocialMediaText>/joao-madruga</BoxSocialMediaText>
                   </a>
@@ -219,10 +219,10 @@ export default function Home() {
               <SubtitleHome className='animate__animated animate__fadeInRight animate__delay-2s'>{'Um desenvolvedor em desenvolvimento'}</SubtitleHome>
           </TitleHome>
             <DottedCircle className='animate__animated animate__fadeInBottomLeft animate__slow animate__delay-5s'>
-              <Image src={'/dottedCircle.svg'} width={706} height={586} />
+              <Image src={'/dottedCircle.svg'} width={706} height={586} alt='A dotted circle'/>
             </DottedCircle>
             <DottedCircleMobile>
-              <Image src={'/dottedCircleMobile.svg'} width={414} height={261} />
+              <Image src={'/dottedCircleMobile.svg'} width={414} height={261} alt='A dotted circle'/>
             </DottedCircleMobile>
             <div className='scrollTriangle' onClick={() => ScrollTo(1)}>
             <HomeTriangleSVG width={30} height={30} fill='#fff' stroke='#fff'/>
@@ -242,7 +242,7 @@ export default function Home() {
               <Frame style={{cursor: 'default', width: '290px', height: '380px', transform: 'scale(1.2)'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showFrame' : 'invisibleDisplay') : ''} color={'#0084FF'}>
                 <Border style={{width: '290px', height: '380px'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showBorder' : 'invisibleDisplay') : ''} color={'#0084FF'}></Border>
                 <div style={{width: '100%', height: '100%', zIndex: '-1', backgroundColor:'#fff', display:'flex', justifyContent:'center'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'animate__animated animate__fadeIn animate__delay-1s' : 'invisibleDisplay') : ''}>
-                    <Image src={'/me.svg'} width={400} height={532} quality={100} />
+                    <Image src={'/me.svg'} width={400} height={532} quality={100} alt='João Madruga image'/>
                 </div>
                   
               </Frame>
@@ -262,10 +262,10 @@ export default function Home() {
                     <Border id='Border' className={isPage2Rendered == false ? (page >= 1.60 ? 'showBorder' : 'invisibleDisplay') : ''} color={'#000'}></Border>
                     <DivImage className={isPage2Rendered == false ? (page >= 1.60 ? 'animate__animated animate__fadeIn animate__delay-1s' : 'invisibleDisplay') : ''}>
                       <BlurBackgroundImage className='BlurImage'>
-                        <Image src={'/ProjectsImage/HoradoServico.svg'} width={247} height={233}/>
+                        <Image src={'/ProjectsImage/HoradoServico.svg'} width={247} height={233} alt='Project "Hora do serviço" design'/>
                       </BlurBackgroundImage>
                       <IconImage>
-                        <Image src={'/ProjectsImage/HoradoServicoIcon.svg'} width={116} height={116} />
+                        <Image src={'/ProjectsImage/HoradoServicoIcon.svg'} width={116} height={116} alt='Project "Hora do serviço" logo'/>
                       </IconImage>
                     </DivImage>
                 </Frame>
@@ -278,10 +278,10 @@ export default function Home() {
                   <Border id='Border' className={isPage2Rendered == false ? (page >= 1.60 ? 'showBorder' : 'invisibleDisplay') : ''} color={'#000'}></Border>
                   <DivImage className={isPage2Rendered == false ? (page >= 1.60 ? 'animate__animated animate__fadeIn animate__delay-1s' : 'invisibleDisplay') : ''}>
                       <BlurBackgroundImage className='BlurImage'>
-                        <Image src={'/ProjectsImage/AWREng.svg'} width={333} height={218}/>
+                        <Image src={'/ProjectsImage/AWREng.svg'} width={333} height={218} alt='Project "AWR Engenharia" design'/>
                       </BlurBackgroundImage>
                       <IconImage>
-                        <Image src={'/ProjectsImage/AWREngIcon.svg'} width={172} height={150} />
+                        <Image src={'/ProjectsImage/AWREngIcon.svg'} width={172} height={150} alt='Project "AWR Engenharia" logo'/>
                       </IconImage>
                     </DivImage>
                 </Frame>
@@ -294,10 +294,10 @@ export default function Home() {
                   <Border id='Border' className={isPage2Rendered == false ? (page >= 1.60 ? 'showBorder' : 'invisibleDisplay') : ''} color={'#000'}></Border>
                   <DivImage className={isPage2Rendered == false ? (page >= 1.60 ? 'animate__animated animate__fadeIn animate__delay-1s' : 'invisibleDisplay') : ''}>
                       <BlurBackgroundImage className='BlurImage'>
-                        <Image src={'/ProjectsImage/MyHome.svg'} width={325} height={205}/>
+                        <Image src={'/ProjectsImage/MyHome.svg'} width={325} height={205} alt='Project "MyHome" design'/>
                       </BlurBackgroundImage>
                       <IconImage>
-                        <Image src={'/ProjectsImage/MyHomeIcon.svg'} width={116} height={117} />
+                        <Image src={'/ProjectsImage/MyHomeIcon.svg'} width={116} height={117} alt='Project "MyHome" logo'/>
                       </IconImage>
                   </DivImage>
                 </Frame>
@@ -434,12 +434,12 @@ export default function Home() {
         </Section>
         <Footer>
           <a style={{display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}} href='https://github.com/joaomadruga' target="_blank">
-            <Image src={'/github.svg'} width={39} height={39} />
+            <Image src={'/github.svg'} width={39} height={39} alt='Github logo'/>
             <TextFooter>/joaomadruga</TextFooter>
           </a>
           <TextFooter>made with ❤ and {'<code>'}</TextFooter>
           <a style={{display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}} href='https://www.linkedin.com/in/joao-madruga' target="_blank">
-            <Image src={'/linkedin.svg'} width={39} height={39} />
+            <Image src={'/linkedin.svg'} width={39} height={39} alt='Linkedin logo'/>
             <TextFooter>/joao-madruga</TextFooter>
           </a>
           
@@ -450,7 +450,7 @@ export default function Home() {
     return(
       <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', width: '100vw', height: '100vh', flexDirection: 'column'}}>
         <HomeTriangle animation={showLoadingAnimationOut == true ? 'fadeOut' : 'spin'} animationTime={showLoadingAnimationOut == true ? '1s' : '4s'}>
-          <Image src='/LoadingTriangle.svg' width={150} height={150} />
+          <Image src='/LoadingTriangle.svg' width={150} height={150} alt='Triangle'/>
         </HomeTriangle>
         <LoadingText animation={showLoadingAnimationOut == true ? 'fadeOut' : 'spin'} animationTime={showLoadingAnimationOut == true ? '1s' : ''} style={{color: 'white', display: 'flex', marginTop: '32px'}}>loading
           <Typewriter

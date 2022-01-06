@@ -42,14 +42,14 @@ export default function App({ Component, pageProps }) {
 
           {/* Twitter */}
           <meta name="twitter:card" content="summary" key="twcard" />
-          <meta name="twitter:creator" content={"@joaomadruga"} key="twhandle" />
+          <meta name="twitter:creator" content={"@joaommadruga"} key="twhandle" />
 
           {/* Open Graph */}
           <meta property="og:url" content={"https://portfolio-joaomadruga.vercel.app/"} key="ogurl" />
-          <meta property="og:image" content={"/iconWebsite.svg"} key="ogimage" />
-          <meta property="og:site_name" content={"Portfolio - João Madruga"} key="ogsitename" />
-          <meta property="og:title" content={"home"} key="ogtitle" />
-          <meta property="og:description" content={"Portfolio que conta a história de João Madruga no mundo dev."} key="ogdesc" />
+          <meta property="og:image" content="/iconWebsite.svg" key="ogimage" />
+          <meta property="og:site_name" content={"Portfólio - João Madruga"} key="ogsitename" />
+          <meta property="og:title" content={"Portfólio - João Madruga"} key="ogtitle" />
+          <meta property="og:description" content={"Portfólio que conta a história de João Madruga no mundo de tecnologia."} key="ogdesc" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>

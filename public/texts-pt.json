@@ -25,6 +25,23 @@
             "buttonText": "enviar"
         }
         
+    },
+    "projects": {
+        "MyHome": {
+            "text": "Nesse projeto, por ser o meu primeiro com desenvolvimento web, procurei solucionar um problema que eu encontrasse no meu dia a dia. Então, percebi que poderia auxiliar minha família num melhor gerenciamento das contas de casa com o uso de tecnologia. Assim, desenvolvi um site que permite armazenar as diversas contas mensais (energia, luz, água...) e, por meio de gráficos - Chart.js -, analisar gastos desnecessários. Como consequência desse projeto, pude aprender responsividade, alinhamento, interação com banco de dados - e como guardá-los com segurança -, etc.",
+            "subtitle": "clique aqui para ver o site",
+            "techsText": "Tecnologias Utilizadas:"
+        },
+        "HoraDoServico": {
+            "text": "Hora do Serviço! foi minha primeira experiência com desenvolvimento mobile (React Native) e utilizei conceitos dos projetos passados - criação de contas com banco de dados (mongoDB), responsividade, animações, etc -. O motivo de desenvolvimento desse foi para auxiliar minha família na organização das atividades diárias. Então, procurei desenvolver um sistema de comunicação mais eficaz com os integrantes de uma casa, declarando as atividades de cada usuário buscando uma exeperiência mais acessível possível aos meus pais. Assim, acredito que o meu mais marcante aprendizado foi sobre melhores performances em diferentes dispositivos e entender um pouco sobre a complexidade de uma boa experiência de usuário.",
+            "subtitle": "",
+            "techsText": "Tecnologias Utilizadas:"
+        },
+        "AWR": {
+            "text": "Na construção desse projeto procurei desenvolver um produto que trouxesse a empresa para o mundo digital. Então, por ser uma única página, utilizei das facilidades do React para trazer um produto acessível que auxiliasse na conexão da empresa com o público alvo. Além disso, utilizei da facilidade “server side rendering” do nextJS para fazer o envio das informações de contato diretamente para o email da empresa. Me preocupei, também, com as métricas do Google para fazer aumentar o SEO e, consequentemente, aumentar a colocação do site em pesquisas.",
+            "subtitle": "clique aqui para ver o site",
+            "techsText": "Tecnologias Utilizadas:"
+        }
     }
     
 }

@@ -63,9 +63,8 @@ export default function Home() {
   const [showLoadingAnimationOut, setShowLoadingAnimationOut] = useState(false);
   const [selectedOption, setSelectedOption] = useState({ value: 'pt', label: '🇧🇷' });
   const jsonTextPt = require('../public/texts-pt.json'); 
-  const jsonTextEn = require('../public/texts-en.json'); 
+  const jsonTextEn = require('../public/texts-en.json');
   const [languageJSON, setLangaugeJSON] = useState(jsonTextPt);
-  const [homeTitle, setHomeTitle] = useState(languageJSON.home.firstSection.title)
   const router = useRouter();
   
   function ScrollTo(page){
@@ -137,10 +136,8 @@ export default function Home() {
   useEffect(() => {
     if (selectedOption.value == 'pt'){
       setLangaugeJSON(jsonTextPt);
-      setHomeTitle(jsonTextPt.home.firstSection.title);
     }else{
       setLangaugeJSON(jsonTextEn);
-      setHomeTitle(jsonTextEn.home.firstSection.title);
     }
   }, [selectedOption])
 

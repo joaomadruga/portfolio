@@ -13,18 +13,23 @@ import TechnologiesDivInside from '../../components/ProjectsPage/TechnologiesDiv
 import 'animate.css';
 import ProjectText from '../../components/ProjectsPage/ProjectText';
 import Close from '../../components/ProjectsPage/Close';
+import ProjectsLanguage from '../../components/ProjectsPage/ProjectsLanguage';
 
 export default function Projects() {
     const router = useRouter();
     const [animation, setAnimation] = useState(false);
+    const [selectedOption, setSelectedOption] = useState({ value: 'pt', label: '🇧🇷' });
+    const jsonTextPt = require('../../public/texts-pt.json');
+    const jsonTextEn = require('../../public/texts-en.json');
+    const [languageJSON, setLangaugeJSON] = useState(jsonTextPt);
     let ProjectsObject = {};
     const ProjectsNames = ['awrengenharia', 'myhome', 'horadoservico']
     const [ActualProject, setActualProject] = useState('awrengenharia');
-    const AWRObject = {title: 'AWR Engenharia', MainColor: '#00487E', ImageURL: ['/ProjectPageImages/AWREngWide.svg'], widthImage: 520, heightImage: 302, flexBox: 'center', isSite: true, textWidth:'50vw', projectURL: 'https://www.awrengenhariacivil.com.br/', Technologies: ['React', 'Next', 'Node', 'Figma'], text:'Na construção desse projeto procurei desenvolver um produto que trouxesse a empresa para o mundo digital. Então, por ser uma única página, utilizei das facilidades do React para trazer um produto acessível que auxiliasse na conexão da empresa com o público alvo. Além disso, utilizei da facilidade “server side rendering” do nextJS para fazer o envio das informações de contato diretamente para o email da empresa.  Me preocupei, também, com as métricas do Google para fazer aumentar o SEO e, consequentemente, aumentar a colocação do site em pesquisas.'};
+    const AWRObject = {title: 'AWR Engenharia', MainColor: '#00487E', ImageURL: ['/ProjectPageImages/AWREngWide.svg'], widthImage: 520, heightImage: 302, flexBox: 'center', isSite: true, textWidth:'50vw', projectURL: 'https://www.awrengenhariacivil.com.br/', Technologies: ['React', 'Next', 'Node', 'Figma'], text: languageJSON.projects.AWR.text};
     ProjectsObject['awrengenharia'] = AWRObject;
-    const MyHomeObject = {title: 'MyHome', MainColor: '#00BCD4', ImageURL: ['/ProjectPageImages/MyHomeWide.svg'], widthImage: 520, heightImage: 302, flexBox: 'center', isSite: true, textWidth:'50vw', projectURL: 'https://myhome-joaomadruga.vercel.app', Technologies: ['React', 'Next', 'mongoDB', 'Node', 'XD'], text:'Nesse projeto, por ser o meu primeiro com desenvolvimento web, procurei solucionar um problema que eu encontrasse no meu dia a dia. Então, percebi que poderia auxiliar minha família num melhor gerenciamento das contas de casa com o uso de tecnologia. Assim, desenvolvi um site que permite armazenar as diversas contas mensais (energia, luz, água...) e, por meio de gráficos - Chart.js -, analisar gastos desnecessários. Como consequência desse projeto, pude aprender responsividade, alinhamento, interação com banco de dados - e como guardá-los com segurança -, etc.'};
+    const MyHomeObject = {title: 'MyHome', MainColor: '#00BCD4', ImageURL: ['/ProjectPageImages/MyHomeWide.svg'], widthImage: 520, heightImage: 302, flexBox: 'center', isSite: true, textWidth:'50vw', projectURL: 'https://myhome-joaomadruga.vercel.app', Technologies: ['React', 'Next', 'mongoDB', 'Node', 'XD'], text: languageJSON.projects.MyHome.text};
     ProjectsObject['myhome'] = MyHomeObject;
-    const HoradoServicoObject = {title: 'Hora do Serviço!', MainColor: '#F2A54A', ImageURL: ['/ProjectPageImages/HoraDoServicoImg1.svg', '/ProjectPageImages/HoraDoServicoImg2.svg', '/ProjectPageImages/HoraDoServicoImg3.svg'], textWidth: '60vw', widthImage: 276, heightImage: 359, flexBox: 'space-between', isSite: false, Technologies: ['ReactNative', 'mongoDB', 'Node', 'Figma'], text:'Hora do Serviço! foi minha primeira experiência com desenvolvimento mobile (React Native) e utilizei conceitos dos projetos passados - criação de contas com banco de dados (mongoDB), responsividade, animações, etc -. O motivo de desenvolvimento desse foi para auxiliar minha família na organização das atividades diárias. Então, procurei desenvolver um sistema de comunicação mais eficaz com os integrantes de uma casa, declarando as atividades de cada usuário buscando uma exeperiência mais acessível possível aos meus pais. Assim, acredito que o meu mais marcante aprendizado foi sobre melhores performances em diferentes dispositivos e entender um pouco sobre a complexidade de uma boa experiência de usuário.'};
+    const HoradoServicoObject = {title: 'Hora do Serviço!', MainColor: '#F2A54A', ImageURL: ['/ProjectPageImages/HoraDoServicoImg1.svg', '/ProjectPageImages/HoraDoServicoImg2.svg', '/ProjectPageImages/HoraDoServicoImg3.svg'], textWidth: '60vw', widthImage: 276, heightImage: 359, flexBox: 'space-between', isSite: false, Technologies: ['ReactNative', 'mongoDB', 'Node', 'Figma'], text: languageJSON.projects.HoraDoServico.text};
     ProjectsObject['horadoservico'] = HoradoServicoObject;
     async function getURL() {
         setAnimation(true)
@@ -55,6 +60,15 @@ export default function Projects() {
     useEffect(() => {
         getURL()
     }, [])
+
+    useEffect(() => {
+        if (selectedOption.value == 'pt'){
+          setLangaugeJSON(jsonTextPt);
+        }else{
+          setLangaugeJSON(jsonTextEn);
+        }
+      }, [selectedOption])
+
     async function changeProject(nextOrBack){
         document.getElementsByTagName('body')[0].style.backgroundColor = 'white'
         document.getElementsByTagName('body')[0].style.width = '100vw'
@@ -135,10 +149,10 @@ export default function Projects() {
             className={animation ? 'animate__animated animate__fadeInUp': 'animate__animated animate__fadeOutDown'}
             target="_blank"
             >
-                clique aqui para ver o site
+                {languageJSON.projects.AWR.subtitle}
             </TextLinkWebsite>
             <TechnologiesDiv className={animation ? 'animate__animated animate__fadeInUp': 'animate__animated animate__fadeOutDown'}>
-                <p style={{fontSize: '1.4rem'}}>Tecnologias utilizadas:</p>
+                <p style={{fontSize: '1.4rem'}}>{languageJSON.projects.AWR.techsText}</p>
                 <TechnologiesDivInside>
                     {ProjectsObject[ActualProject].Technologies.map(function(currentTec, index){
                         return (
@@ -147,6 +161,7 @@ export default function Projects() {
                     })}
                 </TechnologiesDivInside>
             </TechnologiesDiv>
+            <ProjectsLanguage selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
       </ProjectPageContent>
   )
 }

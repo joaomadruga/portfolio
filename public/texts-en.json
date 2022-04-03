@@ -25,6 +25,23 @@
             "buttonText": "send"
         }
         
+    },
+    "projects": {
+        "MyHome": {
+            "text": "In this project, for being the first with webdev, i have tried to solve an diary problem that i could find. So, i realized that i could help my family in a better bills management using technology. Thereby, i developed a website that allow to store the many month bills (example: light, water) and, using graphs - Chart.js -, analyze unnecessary expenses. As a result of this project, i learned resposiviness, align, interaction with databases - and how to store them safe -, etc.",
+            "subtitle": "click here to see the website",
+            "techsText": "Used technologies:"
+        },
+        "HoraDoServico": {
+            "text": "'Hora do Serviço' was my first experience with mobile development (React Native) and i've used old projects concepts - creating accounts with mongoDB, respossiviness, animations, etc -. This solution was developed to auxiliate my familiy in organization of dailys home activites. So, i tried to develop a system of communication more efficient with the family members, declaring each users activites seeking for the simplest user experience for my parents. In this scenario, i believe that the most important learn that i had was about better perfomances in diferrents devices and understanding more about the complexity of a good user experience.",
+            "subtitle": "",
+            "techsText": "Used technologies:"
+        },
+        "AWR": {
+            "text": "In the construction of this project, i have tried to develop a product that bring the company to the technological world. So, for being one page, i used the React benefits to came with a project that was accessible and helped in company-user connection. Furthermore, i used Next.js, with server side rendering, to do the message connection with the company mail. It was my concern, too, with the google metrics seeking to improve SEO and, consequently, better website search placing.",
+            "subtitle": "click here to see the website",
+            "techsText": "Used technologies:"
+        }
     }
     
 }

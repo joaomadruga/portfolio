@@ -9,6 +9,7 @@ const options = [
 
 const DivProjectsLanguage = styled.div`
     position: absolute;
+    z-index: 999;
     bottom: 30px;
     right: 100px;
 

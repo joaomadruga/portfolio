@@ -1,0 +1,30 @@
+{
+    "home": {
+        "firstSection": {
+            "title": "Hi, i'm João!",
+            "subtitle": "A developer in development",
+            "navbar": ["History", "Projects", "Passion", "Contact"]
+        },
+        "secondSection": {
+            "cardTitle": "History",
+            "text": ["I'm a developer focused on problems solution with", "criativity", "and", "technology", "Currently, i'm a Information Systems student in ", "Centro de Informática", "from University Federal of Pernambuco and i'm always open to oportunities that makes me learn and, consequently, benefit all ecosystem."]
+        },
+        "thirdSection": {
+            "cardTitle": "Projects",
+            "projectsName": ["Hora do Serviço!", "AWR Engenharia", "MyHome"],
+            "subtitle": "see more about my projects!"
+        },
+        "fourthSection": {
+            "cardTitle": "Passion - What moves me?",
+            "text": ["I'm moved to", "technology ", "since my childhood and always used as a facilitator to the various ideas that I had. That said, learning to programming was ", "emancipator ", "and, while I was learning, I've tried to develop projects that facilitated day-to-day situations. So, I've developed ", "websites ", "and ", "mobile apps ", "from sketch to manage bill, home activities, always using ", "Javascript ", "in all process."]
+        },
+        "fifthSection": {
+            "cardTitle": "Contact - Want to hire me?",
+            "inputTitles": ["Your name", "Your email", "Service", "Your social media (optional)", "Message (optional)"],
+            "inputLabels": ["What's your name?", "What's your mail?", "What is the contact reason?", "How see more about your company?", "Leave your message! 😀"],
+            "buttonText": "send"
+        }
+        
+    }
+    
+}

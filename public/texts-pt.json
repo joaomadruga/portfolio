@@ -1,0 +1,30 @@
+{
+    "home": {
+        "firstSection": {
+            "title": "Olá, me chamo João!",
+            "subtitle": "Um desenvolvedor em desenvolvimento",
+            "navbar": ["História", "Projetos", "Paixão", "Contato"]
+        },
+        "secondSection": {
+            "cardTitle": "História",
+            "text": ["Sou um desenvolvedor focado em solucionar problemas com", "criatividade", "e", " tecnologia", "Atualmente, curso Sistemas de Informação no", "Centro de informática", "da Universidade Federal de Pernambuco e busco oportunidades que me façam aprender e, consequentemente, beneficiar todo ecossistema."]
+        },
+        "thirdSection": {
+            "cardTitle": "Projetos",
+            "projectsName": ["Hora do Serviço!", "AWR Engenharia", "MyHome"],
+            "subtitle": "saiba mais sobre meus projetos!"
+        },
+        "fourthSection": {
+            "cardTitle": "Paixão - O que me move?",
+            "text": ["Sou movido por ", "tecnologia ", "desde a infância e sempre utilizei como facilitador para as diversas ideias que tive. Diante disso, aprender a programar foi ", "libertador ", "e, enquanto aprendia, procurei desenvolver projetos que facilitam a minha vida e a das pessoas ao meu redor. Então, desenvolvi ", "sites ", "e ", "aplicativos mobile ", "'from sketch' para gerenciamento de contas, atividades da casa, etc - sempre utilizando ", "Javascript ", "em todo o processo -."]
+        },
+        "fifthSection": {
+            "cardTitle": "Contato - Deseja me contratar?",
+            "inputTitles": ["Seu nome", "Seu email", "Serviço", "Suas redes sociais (opcional)", "Mensagem (opcional)"],
+            "inputLabels": ["Qual seu nome?", "Qual seu email?", "Qual o motivo do contato?", "Como conhecer sua empresa?", "Deixe aqui sua mensagem! 😀"],
+            "buttonText": "enviar"
+        }
+        
+    }
+    
+}

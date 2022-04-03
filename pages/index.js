@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Swal from 'sweetalert2';
 import { useRouter } from 'next/router';
 import Typewriter from 'typewriter-effect';
@@ -42,6 +41,7 @@ import DivImage from '../components/Projects/DivImage';
 import BlurBackgroundImage from '../components/Projects/BlurBackgroundImage';
 import IconImage from '../components/Projects/IconImage';
 import DottedCircleMobile from '../components/home/DottedCircleMobile';
+import HomeLanguage from '../components/home/HomeLanguage';
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMouseOver, setIsMouseOver] = useState(false)
@@ -58,12 +58,16 @@ export default function Home() {
   const [service, setService] = useState('');
   const [socialMedia, setSocialMedia] = useState('');
   const [message, setMessage] = useState('');
-  const [showPage1, setShowPage1] = useState(false);
-  const [showPage2, setShowPage2] = useState(false);
   const [showPage3, setShowPage3] = useState(false);
   const [showPage4, setShowPage4] = useState(false);
   const [showLoadingAnimationOut, setShowLoadingAnimationOut] = useState(false);
+  const [selectedOption, setSelectedOption] = useState({ value: 'pt', label: '🇧🇷' });
+  const jsonTextPt = require('../public/texts-pt.json'); 
+  const jsonTextEn = require('../public/texts-en.json'); 
+  const [languageJSON, setLangaugeJSON] = useState(jsonTextPt);
+  const [homeTitle, setHomeTitle] = useState(languageJSON.home.firstSection.title)
   const router = useRouter();
+  
   function ScrollTo(page){
     page *= window.innerHeight
     window.scrollTo(0, page)
@@ -130,6 +134,16 @@ export default function Home() {
     }, 800)
   }, [])
 
+  useEffect(() => {
+    if (selectedOption.value == 'pt'){
+      setLangaugeJSON(jsonTextPt);
+      setHomeTitle(jsonTextPt.home.firstSection.title);
+    }else{
+      setLangaugeJSON(jsonTextEn);
+      setHomeTitle(jsonTextEn.home.firstSection.title);
+    }
+  }, [selectedOption])
+
   async function sendEmail(name, email, service, socialMedia, message) {
     const button = document.getElementsByClassName('ButtonSend')[0];
     button.disabled = true;
@@ -182,10 +196,10 @@ export default function Home() {
                 </div>
               </div>
               <NavHeader className='animate__animated animate__fadeInDown'>
-                <TextNav onClick={() => ScrollTo(1)}>História</TextNav>
-                <TextNav onClick={() => ScrollTo(2)}>Projetos</TextNav>
-                <TextNav onClick={() => ScrollTo(3)}>Paixão</TextNav>
-                <TextNav onClick={() => ScrollTo(4)}>Contato</TextNav>
+                <TextNav onClick={() => ScrollTo(1)}>{languageJSON.home.firstSection.navbar[0]}</TextNav>
+                <TextNav onClick={() => ScrollTo(2)}>{languageJSON.home.firstSection.navbar[1]}</TextNav>
+                <TextNav onClick={() => ScrollTo(3)}>{languageJSON.home.firstSection.navbar[2]}</TextNav>
+                <TextNav onClick={() => ScrollTo(4)}>{languageJSON.home.firstSection.navbar[3]}</TextNav>
               </NavHeader>
             </HomeHeader>
             <div 
@@ -212,11 +226,20 @@ export default function Home() {
               </div>
             <TitleHome className='animate__animated animate__fadeIn animate__slower animate__delay-1s'>
               <Typewriter
+              options={{
+                loop: true,
+              }}
               onInit={(typewriter) => {
-                typewriter.typeString('Olá, me chamo João!')
+                typewriter
+                .typeString(jsonTextPt.home.firstSection.title)
                 .start()
+                .pauseFor(2500)
+                .deleteAll()
+                .typeString(jsonTextEn.home.firstSection.title)
+                .start()
+                .pauseFor(2500)
               }}/>
-              <SubtitleHome className='animate__animated animate__fadeInRight animate__delay-2s'>{'Um desenvolvedor em desenvolvimento'}</SubtitleHome>
+              <SubtitleHome className='animate__animated animate__fadeInRight animate__delay-2s'>{languageJSON.home.firstSection.subtitle}</SubtitleHome>
           </TitleHome>
             <DottedCircle className='animate__animated animate__fadeInBottomLeft animate__slow animate__delay-5s'>
               <Image src={'/dottedCircle.svg'} width={706} height={586} alt='A dotted circle'/>
@@ -225,18 +248,19 @@ export default function Home() {
               <Image src={'/dottedCircleMobile.svg'} width={414} height={261} alt='A dotted circle'/>
             </DottedCircleMobile>
             <div className='scrollTriangle' onClick={() => ScrollTo(1)}>
-            <HomeTriangleSVG width={30} height={30} fill='#fff' stroke='#fff'/>
-          </div>
+              <HomeTriangleSVG width={30} height={30} fill='#fff' stroke='#fff'/>
+            </div>
+            <HomeLanguage selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
           </HomeSectionContent>
         </Section>
         <Section alignItems='center' justifyContent='center'>
           <AboutContent>
             <Card className={isPage1Rendered == false ? (page >= 0.13 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={'#fff'}>
-              <TextCard>História</TextCard>
+              <TextCard>{languageJSON.home.secondSection.cardTitle}</TextCard>
             </Card>
             <div style={{width: '100vw', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginLeft: '-20%'}}>
               <Paragraph className={isPage1Rendered == false ? (page >= 0.45 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} color={'#fff'}>
-              Sou um desenvolvedor focado em solucionar problemas com <SpanText color={'#0084FF'}>criatividade</SpanText> e <SpanText color={'#0084FF'}>tecnologia</SpanText>. Atualmente, curso Sistemas de Informação no <SpanText color={'#0084FF'} style={{cursor: 'pointer'}}><a href='https://portal.cin.ufpe.br/' target="_blank" style={{textDecoration: 'none', color: '#0084FF'}}> Centro de informática </a></SpanText>da Universidade Federal de Pernambuco e busco oportunidades que me façam aprender e, consequentemente, beneficiar todo ecossistema.	 
+              {languageJSON.home.secondSection.text[0]} <SpanText color={'#0084FF'}>{languageJSON.home.secondSection.text[1]}</SpanText> {languageJSON.home.secondSection.text[2]} <SpanText color={'#0084FF'}>{languageJSON.home.secondSection.text[3]}</SpanText>. {languageJSON.home.secondSection.text[4]} <SpanText color={'#0084FF'} style={{cursor: 'pointer'}}><a href='https://portal.cin.ufpe.br/' target="_blank" style={{textDecoration: 'none', color: '#0084FF'}}> {languageJSON.home.secondSection.text[5]} </a></SpanText>{languageJSON.home.secondSection.text[6]} 
               </Paragraph>
               
               <Frame style={{cursor: 'default', width: '290px', height: '380px', transform: 'scale(1.2)'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showFrame' : 'invisibleDisplay') : ''} color={'#0084FF'}>
@@ -254,7 +278,7 @@ export default function Home() {
         <Section style={{backgroundColor: '#fff'}} alignItems='center' justifyContent='center'>
           <ProjectContent>
             <Card className={isPage2Rendered == false ? (page >= 1.15 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={'#0084FF'}>
-              <TextCard color={'#fff'}>Projetos</TextCard>
+              <TextCard color={'#fff'}>{languageJSON.home.thirdSection.cardTitle}</TextCard>
             </Card>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
               <FrameWithBox className='FrameWithBox1'>
@@ -270,7 +294,7 @@ export default function Home() {
                     </DivImage>
                 </Frame>
                 <Box onClick={() => {changeToPage('projects?HoradoServico')}} className={isPage2Rendered == false ? (page >= 1.80 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} bgColor={'#000'} bgColorHover={'#F2A54A'}>
-                  <p>Hora do Serviço!</p>
+                  <p>{languageJSON.home.thirdSection.projectsName[0]}</p>
                 </Box>
               </FrameWithBox>
               <FrameWithBox className='FrameWithBox2'>
@@ -286,7 +310,7 @@ export default function Home() {
                     </DivImage>
                 </Frame>
                 <Box onClick={() => {changeToPage('projects?AWREngenharia')}} className={isPage2Rendered == false ? (page >= 1.80 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} bgColor={'#000'} bgColorHover={'#00386C'}>
-                  <p>AWR Engenharia</p>
+                  <p>{languageJSON.home.thirdSection.projectsName[1]}</p>
                 </Box>
               </FrameWithBox>
               <FrameWithBox className='FrameWithBox3'>
@@ -302,22 +326,22 @@ export default function Home() {
                   </DivImage>
                 </Frame>
                 <Box onClick={() => {changeToPage('projects?MyHome')}} className={isPage2Rendered == false ? (page >= 1.80 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} bgColor={'#000'} bgColorHover={'#00BCD4'}>
-                  <p>MyHome</p>
+                  <p>{languageJSON.home.thirdSection.projectsName[2]}</p>
                 </Box>
               </FrameWithBox> 
             </div>
-            <p onClick={() => {changeToPage('projects')}} style={{textAlign: 'center', fontSize: '1.2rem', cursor: 'pointer', color:'#0084FF'}}>saiba mais sobre meus projetos!</p>
+            <p onClick={() => {changeToPage('projects')}} style={{textAlign: 'center', fontSize: '1.2rem', cursor: 'pointer', color:'#0084FF'}}>{languageJSON.home.thirdSection.subtitle}</p>
           </ProjectContent>
         </Section>
         
         <Section alignItems='center' justifyContent='center'>
           <InterestContent>
             <Card className={isPage3Rendered == false ? (showPage3 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} style={{width: 300}} bgColor={'#fff'}>
-              <TextCard>Paixão - O que me move?</TextCard>
+              <TextCard>{languageJSON.home.fourthSection.cardTitle}</TextCard>
             </Card>
             <div style={{width: '100vw', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginLeft: '-20%'}}>
               <Paragraph className={isPage3Rendered == false ? (showPage3 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} color={'#fff'}>
-              Sou movido por <SpanText color={'#0084FF'}>tecnologia</SpanText> desde a infância e sempre utilizei como facilitador para as diversas ideias que tive. Diante disso, aprender a programar foi  <SpanText color={'#0084FF'}>libertador</SpanText> e, enquanto aprendia, procurei desenvolver projetos que facilitam a minha vida e a das pessoas ao meu redor. Então, desenvolvi <SpanText color={'#0084FF'}>sites</SpanText> e <SpanText color={'#0084FF'}>aplicativos mobile</SpanText> "from sketch" para gerenciamento de contas, atividades da casa, etc - sempre utilizando <SpanText color={'#0084FF'}>Javascript</SpanText> em todo o processo -.
+              {languageJSON.home.fourthSection.text[0]} <SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[1]}</SpanText>{languageJSON.home.fourthSection.text[2]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[3]}</SpanText>{languageJSON.home.fourthSection.text[4]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[5]}</SpanText>{languageJSON.home.fourthSection.text[6]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[7]}</SpanText>{languageJSON.home.fourthSection.text[8]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[9]}</SpanText>{languageJSON.home.fourthSection.text[10]}
               </Paragraph>
                 <div className={isPage3Rendered == false ? (showPage3 ? 'KnowledgeTree' : 'invisibleDisplay') : ''}>
                 <svg width="400" height="500" viewBox="0 0 505 686" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -396,37 +420,37 @@ export default function Home() {
         <Section style={{height: '100%'}} alignItems='center' justifyContent='center'>
           <ContactContent>
             <Card style={{width: 300}} className={isPage4Rendered == false ? (showPage4 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={'#fff'}>
-                <TextCard>Contato - Deseja me contratar?</TextCard>
+                <TextCard>{languageJSON.home.fifthSection.cardTitle}</TextCard>
             </Card>
             <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', flexDirection: 'column'}}>
               <h1 style={{color: '#0084FF', fontWeight: 300, alignSelf:'start', marginLeft: '52px'}}>{'<contact>'}</h1>
               <DivInput>
                 <div>
-                  <TitleInput>Seu Nome</TitleInput>
-                  <Input placeholder='Qual seu nome?' onChange={() => setName(document.getElementsByTagName('input')[0].value)}></Input>
+                  <TitleInput>{languageJSON.home.fifthSection.inputTitles[0]}</TitleInput>
+                  <Input placeholder={languageJSON.home.fifthSection.inputLabels[1]} onChange={() => setName(document.getElementsByTagName('input')[0].value)}></Input>
                 </div>
                 <div>
-                  <TitleInput>Seu Email</TitleInput>
-                  <Input placeholder='Qual seu email?' onChange={() => setEmail(document.getElementsByTagName('input')[1].value)}></Input>
+                  <TitleInput>{languageJSON.home.fifthSection.inputTitles[1]}</TitleInput>
+                  <Input placeholder={languageJSON.home.fifthSection.inputLabels[1]} onChange={() => setEmail(document.getElementsByTagName('input')[1].value)}></Input>
                 </div>
                 <div>
-                  <TitleInput>Serviço</TitleInput>
-                  <Input placeholder='Qual o motivo do contato?' onChange={() => setService(document.getElementsByTagName('input')[2].value)}></Input>
+                  <TitleInput>{languageJSON.home.fifthSection.inputTitles[2]}</TitleInput>
+                  <Input placeholder={languageJSON.home.fifthSection.inputLabels[2]} onChange={() => setService(document.getElementsByTagName('input')[2].value)}></Input>
                 </div>
                 <div>
-                  <TitleInput>Suas Redes Sociais (opcional)</TitleInput>
-                  <Input placeholder='Como conhecer sua empresa?' onChange={() => setSocialMedia(document.getElementsByTagName('input')[3].value)}></Input>
+                  <TitleInput>{languageJSON.home.fifthSection.inputTitles[3]}</TitleInput>
+                  <Input placeholder={languageJSON.home.fifthSection.inputLabels[3]} onChange={() => setSocialMedia(document.getElementsByTagName('input')[3].value)}></Input>
                 </div>
                 <div>
-                  <TitleInput>Mensagem (opcional)</TitleInput>
-                  <TextArea placeholder='Deixe aqui sua mensagem! 😀' style={{width: '190%', height: '244px'}} onChange={() => setMessage(document.getElementsByTagName('textarea')[0].value)}></TextArea>
+                  <TitleInput>{languageJSON.home.fifthSection.inputTitles[4]}</TitleInput>
+                  <TextArea placeholder={languageJSON.home.fifthSection.inputLabels[4]} style={{width: '190%', height: '244px'}} onChange={() => setMessage(document.getElementsByTagName('textarea')[0].value)}></TextArea>
                 </div>
               </DivInput>
               <ButtonSend 
               className='ButtonSend' 
               onClick={isButtonEnabled == true ? () => console.log('') : () => sendEmail(name, email, service, socialMedia, message)}
               >
-                enviar
+                {languageJSON.home.fifthSection.buttonText}
               </ButtonSend>
               <h1 style={{color: '#0084FF', fontWeight: 300, alignSelf:'start', marginLeft: '52px'}}>{'</contact>'}</h1>
             </div>

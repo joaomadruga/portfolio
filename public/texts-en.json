@@ -41,6 +41,16 @@
             "text": "In the construction of this project, i have tried to develop a product that bring the company to the technological world. So, for being one page, i used the React benefits to came with a project that was accessible and helped in company-user connection. Furthermore, i used Next.js, with server side rendering, to do the message connection with the company mail. It was my concern, too, with the google metrics seeking to improve SEO and, consequently, better website search placing.",
             "subtitle": "click here to see the website",
             "techsText": "Used technologies:"
+        },
+        "Carplit": {
+            "text": "In this project we developed an app that centralizes routines of carpool drivers. So, i have participated actively in mobile development, with React Native, of all screens and backend integration - besides the concern of performance, architecture, and mockup fidelity -.",
+            "subtitle": "",
+            "techsText": "Used technologies:"
+        },
+        "EVA": {
+            "text": "EVA is a web platform of projects built in some UFPE courses. Developing this project i was able to solidify my knowledge in React, Next.js, pure CSS. Beyond that, had the opportunity to develop my communication between the team, study more about choosing technologies in viable ways and challenge myself using google sheets as database.",
+            "subtitle": "click here to see the website",
+            "techsText": "Used technologies:"
         }
     }
     

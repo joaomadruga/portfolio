@@ -23,7 +23,7 @@ export default function Projects() {
     const jsonTextEn = require('../../public/texts-en.json');
     const [languageJSON, setLangaugeJSON] = useState(jsonTextPt);
     let ProjectsObject = {};
-    const ProjectsNames = ['awrengenharia', 'myhome', 'horadoservico']
+    const ProjectsNames = ['carplit', 'awrengenharia', 'horadoservico', 'eva', 'myhome']
     const [ActualProject, setActualProject] = useState('awrengenharia');
     const AWRObject = {title: 'AWR Engenharia', MainColor: '#00487E', ImageURL: ['/ProjectPageImages/AWREngWide.svg'], widthImage: 520, heightImage: 302, flexBox: 'center', isSite: true, textWidth:'50vw', projectURL: 'https://www.awrengenhariacivil.com.br/', Technologies: ['React', 'Next', 'Node', 'Figma'], text: languageJSON.projects.AWR.text};
     ProjectsObject['awrengenharia'] = AWRObject;
@@ -31,6 +31,10 @@ export default function Projects() {
     ProjectsObject['myhome'] = MyHomeObject;
     const HoradoServicoObject = {title: 'Hora do Serviço!', MainColor: '#F2A54A', ImageURL: ['/ProjectPageImages/HoraDoServicoImg1.svg', '/ProjectPageImages/HoraDoServicoImg2.svg', '/ProjectPageImages/HoraDoServicoImg3.svg'], textWidth: '60vw', widthImage: 276, heightImage: 359, flexBox: 'space-between', isSite: false, Technologies: ['ReactNative', 'mongoDB', 'Node', 'Figma'], text: languageJSON.projects.HoraDoServico.text};
     ProjectsObject['horadoservico'] = HoradoServicoObject;
+    const CarplitObject = {title: 'Carplit', MainColor: '#6E1DBE', ImageURL: ['/ProjectPageImages/CarplitSplashScreen.svg', '/ProjectPageImages/CarplitStartScreen.svg', '/ProjectPageImages/CarplitHomeScreen.svg'], textWidth: '60vw', widthImage: 276, heightImage: 359, flexBox: 'space-between', isSite: false, Technologies: ['ReactNative', 'Figma'], text: languageJSON.projects.Carplit.text};
+    ProjectsObject['carplit'] = CarplitObject;
+    const EVAObject = {title: 'EVA', MainColor: '#000000', ImageURL: ['/ProjectPageImages/EVAWide.svg'], widthImage: 520, heightImage: 302, flexBox: 'center', isSite: true, textWidth:'50vw', projectURL: 'https://www.eva.art.br/', Technologies: ['React', 'Next', 'Node', 'Figma'], text: languageJSON.projects.EVA.text};
+    ProjectsObject['eva'] = EVAObject;
     async function getURL() {
         setAnimation(true)
         let ActualURL = window.location.href.split('?');
@@ -42,15 +46,15 @@ export default function Projects() {
             var key = ActualURL[i].toLowerCase().trim()
             while (ProjectsObject[key] == undefined) {
                 i += 1;
-                try{
+                try {
                     key = ActualURL[i].toLowerCase().trim();
                 }
                 catch{
                     console.log('')
                 }
                 if (i == 10) {
-                    key = 'awrengenharia'
-                    await router.push(`/projects?awrengenharia`)
+                    key = 'carplit'
+                    await router.push(`/projects?carplit`)
                     break
                 }
             }

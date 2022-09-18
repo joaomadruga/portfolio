@@ -41,6 +41,16 @@
             "text": "Na construção desse projeto procurei desenvolver um produto que trouxesse a empresa para o mundo digital. Então, por ser uma única página, utilizei das facilidades do React para trazer um produto acessível que auxiliasse na conexão da empresa com o público alvo. Além disso, utilizei da facilidade “server side rendering” do nextJS para fazer o envio das informações de contato diretamente para o email da empresa. Me preocupei, também, com as métricas do Google para fazer aumentar o SEO e, consequentemente, aumentar a colocação do site em pesquisas.",
             "subtitle": "clique aqui para ver o site",
             "techsText": "Tecnologias Utilizadas:"
+        },
+        "Carplit": {
+            "text": "No desenvolvimento desse projeto desenvolvemos um aplicativo que centraliza as rotinas de quem oferece caronas e impacta diretamente na organização do motorista. Dessa maneira, participei ativamente no desenvolvimento, com React Native, de todas as telas e integração com o backend - além da preocupação com arquitetura, performance e fidelidade ao mockup -.",
+            "subtitle": "",
+            "techsText": "Tecnologias Utilizadas:"
+        },
+        "EVA": {
+            "text": "EVA é uma plataforma de exibição interativa dos trabalhos da interseção de arte, computação, design e expressão gráfica desenvolvidos nas disciplinas de Introdução à Programação, Introdução à Multimídia, Computação Musical, Jogos Digitais, Criatividade Computacional e Design Gerativo da UFPE. No desenvolvimento desse projeto pude solidificar meus conhecimentos sobre React, Next.js, estilização e CSS puro. Além disso, tive a oportunidade de desenvolver minha comunicação entre a equipe e liderar o time de desenvolvimento frontend precisando pensar e estudar sobre a mais viável escolha de tecnologias além de me desafiar utilizando uma planilha do Google como banco de dados.",
+            "subtitle": "clique aqui para ver o site",
+            "techsText": "Tecnologias Utilizadas:"
         }
     }
     

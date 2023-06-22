@@ -7,7 +7,7 @@ const CardProjectPage = styled.div`
     margin-left: 80px;
     width: max-content;
     padding: 3px 30px;
-    font-family: 'Signika', sans-serif;
+    font-family: 'Manrope', sans-serif;
     height: 30px;
     display: flex;
     align-items: center;

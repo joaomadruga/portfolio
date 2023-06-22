@@ -13,7 +13,7 @@ const TextNav = styled.p`
     left: 0;
     right: 100%;
     bottom: 0;
-    background: #0084FF;
+    background: ${props => props.selectedColor};
     height: 3px;
     -webkit-transition-property: right;
     transition-property: right;

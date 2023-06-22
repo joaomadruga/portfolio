@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Card = styled.div`
     background-color: ${props => props.bgColor};
     width: 100px;
-    font-family: 'Signika', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     height: 30px;
     display: flex;
     align-items: center;

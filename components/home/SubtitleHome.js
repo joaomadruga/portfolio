@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const SubtitleHome = styled.h1`
-    color: #0084FF;
+    color: ${props => props.selectedColor};
+    font-family: 'Space Grotesk', sans-serif;
     font-style: normal;
     font-weight: 400;
     text-align: right;

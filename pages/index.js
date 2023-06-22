@@ -42,6 +42,8 @@ import BlurBackgroundImage from '../components/Projects/BlurBackgroundImage';
 import IconImage from '../components/Projects/IconImage';
 import DottedCircleMobile from '../components/home/DottedCircleMobile';
 import HomeLanguage from '../components/home/HomeLanguage';
+import ColorRectangle from '../components/home/ColorRectangle';
+
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMouseOver, setIsMouseOver] = useState(false)
@@ -65,6 +67,8 @@ export default function Home() {
   const jsonTextPt = require('../public/texts-pt.json'); 
   const jsonTextEn = require('../public/texts-en.json');
   const [languageJSON, setLangaugeJSON] = useState(jsonTextPt);
+  const listOfColors = require('../public/color-constant.json').colors;
+  const [selectedColor, setSelectedColor] = useState(listOfColors[0]);
   const router = useRouter();
   
   function ScrollTo(page){
@@ -179,6 +183,7 @@ export default function Home() {
         </TriangleScrollTop>
         <Section alignItems='center' justifyContent='center'>
           <HomeSectionContent>
+            <ColorRectangle selectedColor={selectedColor} setSelectedColor={setSelectedColor} listOfColors={listOfColors}/>
             <HomeHeader>
               <div 
               onMouseOver={() => showSocialMedia(true)} 
@@ -193,10 +198,10 @@ export default function Home() {
                 </div>
               </div>
               <NavHeader className='animate__animated animate__fadeInDown'>
-                <TextNav onClick={() => ScrollTo(1)}>{languageJSON.home.firstSection.navbar[0]}</TextNav>
-                <TextNav onClick={() => ScrollTo(2)}>{languageJSON.home.firstSection.navbar[1]}</TextNav>
-                <TextNav onClick={() => ScrollTo(3)}>{languageJSON.home.firstSection.navbar[2]}</TextNav>
-                <TextNav onClick={() => ScrollTo(4)}>{languageJSON.home.firstSection.navbar[3]}</TextNav>
+                <TextNav selectedColor={selectedColor} onClick={() => ScrollTo(1)}>{languageJSON.home.firstSection.navbar[0]}</TextNav>
+                <TextNav selectedColor={selectedColor} onClick={() => ScrollTo(2)}>{languageJSON.home.firstSection.navbar[1]}</TextNav>
+                <TextNav selectedColor={selectedColor} onClick={() => ScrollTo(3)}>{languageJSON.home.firstSection.navbar[2]}</TextNav>
+                <TextNav selectedColor={selectedColor} onClick={() => ScrollTo(4)}>{languageJSON.home.firstSection.navbar[3]}</TextNav>
               </NavHeader>
             </HomeHeader>
             <div 
@@ -236,13 +241,17 @@ export default function Home() {
                 .start()
                 .pauseFor(2500)
               }}/>
-              <SubtitleHome className='animate__animated animate__fadeInRight animate__delay-2s'>{languageJSON.home.firstSection.subtitle}</SubtitleHome>
+              <SubtitleHome selectedColor={selectedColor} className='animate__animated animate__fadeInRight animate__delay-2s'>{languageJSON.home.firstSection.subtitle}</SubtitleHome>
           </TitleHome>
             <DottedCircle className='animate__animated animate__fadeInBottomLeft animate__slow animate__delay-5s'>
-              <Image src={'/dottedCircle.svg'} width={706} height={586} alt='A dotted circle'/>
+              <svg width="706" height="586" viewBox="0 0 706 586" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="265.5" cy="440.5" r="440" stroke={selectedColor} stroke-dasharray="45 45"/>
+              </svg>
             </DottedCircle>
             <DottedCircleMobile>
-              <Image src={'/dottedCircleMobile.svg'} width={414} height={261} alt='A dotted circle'/>
+            <svg width="414" height="261" viewBox="0 0 414 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="207" cy="208" r="207.5" stroke={selectedColor} stroke-dasharray="45 45"/>
+            </svg>
             </DottedCircleMobile>
             <div className='scrollTriangle' onClick={() => ScrollTo(1)}>
               <HomeTriangleSVG width={30} height={30} fill='#fff' stroke='#fff'/>
@@ -257,13 +266,13 @@ export default function Home() {
             </Card>
             <div style={{width: '100vw', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginLeft: '-20%'}}>
               <Paragraph className={isPage1Rendered == false ? (page >= 0.45 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} color={'#fff'}>
-              {languageJSON.home.secondSection.text[0]} <SpanText color={'#0084FF'}>{languageJSON.home.secondSection.text[1]}</SpanText> {languageJSON.home.secondSection.text[2]} <SpanText color={'#0084FF'}>{languageJSON.home.secondSection.text[3]}</SpanText>. {languageJSON.home.secondSection.text[4]} <SpanText color={'#0084FF'} style={{cursor: 'pointer'}}><a href='https://portal.cin.ufpe.br/' target="_blank" style={{textDecoration: 'none', color: '#0084FF'}}> {languageJSON.home.secondSection.text[5]} </a></SpanText>{languageJSON.home.secondSection.text[6]} 
+              {languageJSON.home.secondSection.text[0]} <SpanText color={selectedColor}>{languageJSON.home.secondSection.text[1]}</SpanText> {languageJSON.home.secondSection.text[2]} <SpanText color={selectedColor}>{languageJSON.home.secondSection.text[3]}</SpanText>. {languageJSON.home.secondSection.text[4]} <SpanText color={selectedColor} style={{cursor: 'pointer'}}><a href='https://portal.cin.ufpe.br/' target="_blank" style={{textDecoration: 'none', color: selectedColor}}> {languageJSON.home.secondSection.text[5]} </a></SpanText>{languageJSON.home.secondSection.text[6]} 
               </Paragraph>
               
-              <Frame style={{cursor: 'default', width: '290px', height: '380px', transform: 'scale(1.2)'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showFrame' : 'invisibleDisplay') : ''} color={'#0084FF'}>
-                <Border style={{width: '290px', height: '380px'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showBorder' : 'invisibleDisplay') : ''} color={'#0084FF'}></Border>
-                <div style={{width: '100%', height: '100%', zIndex: '-1', backgroundColor:'#fff', display:'flex', justifyContent:'center'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'animate__animated animate__fadeIn animate__delay-1s' : 'invisibleDisplay') : ''}>
-                    <Image src={'/me.svg'} width={400} height={532} quality={100} alt='João Madruga image'/>
+              <Frame style={{cursor: 'default', width: '290px', height: '358px', transform: 'scale(1.2)'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showFrame' : 'invisibleDisplay') : ''} color={'#fff'}>
+                <Border style={{width: '290px', height: '358px'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'showBorder' : 'invisibleDisplay') : ''} color={'#fff'}></Border>
+                <div style={{width: '100%', height: '100%', zIndex: '-1', backgroundColor:selectedColor, display:'flex', justifyContent:'center'}} className={isPage1Rendered == false ? (page >= 0.70 ? 'animate__animated animate__fadeIn animate__delay-1s' : 'invisibleDisplay') : ''}>
+                    <Image src={'/me.svg'} width={420} height={500} quality={100} alt='João Madruga image'/>
                 </div>
                   
               </Frame>
@@ -274,7 +283,7 @@ export default function Home() {
   
         <Section style={{backgroundColor: '#fff'}} alignItems='center' justifyContent='center'>
           <ProjectContent>
-            <Card className={isPage2Rendered == false ? (page >= 1.15 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={'#0084FF'}>
+            <Card className={isPage2Rendered == false ? (page >= 1.15 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={selectedColor}>
               <TextCard color={'#fff'}>{languageJSON.home.thirdSection.cardTitle}</TextCard>
             </Card>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
@@ -327,7 +336,7 @@ export default function Home() {
                 </Box>
               </FrameWithBox> 
             </div>
-            <p onClick={() => {changeToPage('projects')}} style={{textAlign: 'center', fontSize: '1.2rem', cursor: 'pointer', color:'#0084FF'}}>{languageJSON.home.thirdSection.subtitle}</p>
+            <p onClick={() => {changeToPage('projects')}} style={{textAlign: 'center', fontSize: '1.2rem', cursor: 'pointer', color:selectedColor}}>{languageJSON.home.thirdSection.subtitle}</p>
           </ProjectContent>
         </Section>
         
@@ -338,7 +347,7 @@ export default function Home() {
             </Card>
             <div style={{width: '100vw', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginLeft: '-20%'}}>
               <Paragraph className={isPage3Rendered == false ? (showPage3 ? 'animate__animated animate__fadeInUp' : 'invisibleDisplay') : ''} color={'#fff'}>
-              {languageJSON.home.fourthSection.text[0]} <SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[1]}</SpanText>{languageJSON.home.fourthSection.text[2]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[3]}</SpanText>{languageJSON.home.fourthSection.text[4]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[5]}</SpanText>{languageJSON.home.fourthSection.text[6]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[7]}</SpanText>{languageJSON.home.fourthSection.text[8]}<SpanText color={'#0084FF'}>{languageJSON.home.fourthSection.text[9]}</SpanText>{languageJSON.home.fourthSection.text[10]}
+              {languageJSON.home.fourthSection.text[0]} <SpanText color={selectedColor}>{languageJSON.home.fourthSection.text[1]}</SpanText>{languageJSON.home.fourthSection.text[2]}<SpanText color={selectedColor}>{languageJSON.home.fourthSection.text[3]}</SpanText>{languageJSON.home.fourthSection.text[4]}<SpanText color={selectedColor}>{languageJSON.home.fourthSection.text[5]}</SpanText>{languageJSON.home.fourthSection.text[6]}<SpanText color={selectedColor}>{languageJSON.home.fourthSection.text[7]}</SpanText>{languageJSON.home.fourthSection.text[8]}<SpanText color={selectedColor}>{languageJSON.home.fourthSection.text[9]}</SpanText>{languageJSON.home.fourthSection.text[10]}
               </Paragraph>
                 <div className={isPage3Rendered == false ? (showPage3 ? 'KnowledgeTree' : 'invisibleDisplay') : ''}>
                 <svg width="400" height="500" viewBox="0 0 505 686" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -416,11 +425,11 @@ export default function Home() {
         </Section>
         <Section style={{height: '100%'}} alignItems='center' justifyContent='center'>
           <ContactContent>
-            <Card style={{width: 300}} className={isPage4Rendered == false ? (showPage4 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={'#fff'}>
+            <Card style={{width: 350}} className={isPage4Rendered == false ? (showPage4 ? 'animate__animated animate__fadeInLeft' : 'invisibleDisplay') : ''} bgColor={'#fff'}>
                 <TextCard>{languageJSON.home.fifthSection.cardTitle}</TextCard>
             </Card>
             <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', flexDirection: 'column'}}>
-              <h1 style={{color: '#0084FF', fontWeight: 300, alignSelf:'start', marginLeft: '52px'}}>{'<contact>'}</h1>
+              <h1 style={{color: selectedColor, fontWeight: 300, alignSelf:'start', marginLeft: '52px'}}>{'<contact>'}</h1>
               <DivInput>
                 <div>
                   <TitleInput>{languageJSON.home.fifthSection.inputTitles[0]}</TitleInput>
@@ -445,11 +454,12 @@ export default function Home() {
               </DivInput>
               <ButtonSend 
               className='ButtonSend' 
+              selectedColor={selectedColor}
               onClick={isButtonEnabled == true ? () => console.log('') : () => sendEmail(name, email, service, socialMedia, message)}
               >
                 {languageJSON.home.fifthSection.buttonText}
               </ButtonSend>
-              <h1 style={{color: '#0084FF', fontWeight: 300, alignSelf:'start', marginLeft: '52px'}}>{'</contact>'}</h1>
+              <h1 style={{color: selectedColor, fontWeight: 300, alignSelf:'start', marginLeft: '52px'}}>{'</contact>'}</h1>
             </div>
           </ContactContent>
         </Section>

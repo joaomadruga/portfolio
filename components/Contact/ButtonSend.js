@@ -13,7 +13,7 @@ const ButtonSend = styled.button`
     width: 250px;
     border-radius: 6px;
     height: 36px;
-    background-color: #0084FF;
+    background-color: ${props => props.selectedColor};;
     color: #fff;
     border: none;
     transition: all 1s;

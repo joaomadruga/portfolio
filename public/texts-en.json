@@ -51,6 +51,21 @@
             "text": "EVA is a web platform of projects built in some UFPE courses. Developing this project i was able to solidify my knowledge in React, Next.js, pure CSS. Beyond that, had the opportunity to develop my communication between the team, study more about choosing technologies in viable ways and challenge myself using google sheets as database.",
             "subtitle": "click here to see the website",
             "techsText": "Used technologies:"
+        },
+        "CLUST": {
+            "text": "This project was created during the Apple Developer Academy's Foundations course. With the Academy as the context, we developed an app that promotes teams aligned with each student's learning expectations. Throughout the development process, I gained experience in Swift, SwiftUI, Multipeer Connectivity, prototyping, and encountered various other challenges that emerged during the project. Using peers, the entire team formation process occurs entirely via a local network, posing a challenge in the development process.",
+            "subtitle": "Click here to view the repository",
+            "techsText": "Used technologies:"
+        },
+        "ESTAPLIT": {
+            "text": "Estaplit is a parking marketplace that connects drivers to real-time available parking spaces. I was responsible for developing the backend using Django with Django Rest API, expanding my knowledge in web development. I also worked on the frontend in React Native. Additionally, I integrated the backend with Google Maps and handled the development and integration of the frontend in React Native. This experience solidified my skills in creating APIs, integrating with external services, and building flexible and scalable systems.",
+            "subtitle": "Click here to view the repository",
+            "techsText": "Used technologies:"
+        },
+        "ARTICLE-MEDIUM": {
+            "text": "In this article, I share how I turned this device into a personal server based on Linux, allowing the uninterrupted execution of scripts and automations 24 hours a day. I explore the necessary steps, from choosing a Linux operating system and installing applications like Andronix and Termux to configuring automatic server startup.",
+            "subtitle": "Click here to read on Medium",
+            "techsText": ""
         }
     }
     

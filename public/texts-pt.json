@@ -51,6 +51,21 @@
             "text": "EVA é uma plataforma de exibição interativa dos trabalhos da interseção de arte, computação, design e expressão gráfica desenvolvidos nas disciplinas de Introdução à Programação, Introdução à Multimídia, Computação Musical, Jogos Digitais, Criatividade Computacional e Design Gerativo da UFPE. No desenvolvimento desse projeto pude solidificar meus conhecimentos sobre React, Next.js, estilização e CSS puro. Além disso, tive a oportunidade de desenvolver minha comunicação entre a equipe e liderar o time de desenvolvimento frontend precisando pensar e estudar sobre a mais viável escolha de tecnologias além de me desafiar utilizando uma planilha do Google como banco de dados.",
             "subtitle": "clique aqui para ver o site",
             "techsText": "Tecnologias Utilizadas:"
+        },
+        "CLUST": {
+            "text": "Este projeto foi criado durante a disciplina de Foundations da Apple Developer Academy. Com o cenário da solução sendo a Academy, desenvolvemos um app que promove equipes alinhadas com as expectativas de aprendizagem de cada estudante da Academy. Durante o processo de desenvolvimento, adquiri experiência em Swift, SwiftUI, Multipeer Conectivity, prototipação entre diversos outros desafios que surgiram no decorrer do projeto. Com o uso dos peers, todo processo de formação de equipes acontece totalmente via rede local, um desafio para o processo de desenvolvimento.",
+            "subtitle": "clique aqui para ver o repositório",
+            "techsText": "Tecnologias Utilizadas:"
+        },
+        "ESTAPLIT": {
+            "text": "Estaplit é um marketplace de estacionamentos que conecta motoristas a vagas disponíveis em tempo real. Nele fui responsável por desenvolver o backend em Django com Django Rest API, ampliando meu conhecimento em desenvolvimento web e o frontend em React Native. Além disso, integrei o backend com o Google Maps e também trabalhei no desenvolvimento e integração da parte frontend em React Native. Essa experiência consolidou minha habilidade em criação de APIs, integração com serviços externos e na construção de sistemas flexíveis e escaláveis.",
+            "subtitle": "clique aqui para ver o repositório",
+            "techsText": "Tecnologias Utilizadas:"
+        },
+        "ARTICLE-MEDIUM": {
+            "text": "No artigo, compartilho como transformei esse dispositivo em um servidor pessoal baseado em Linux, permitindo a execução ininterrupta de scripts e automações 24 horas por dia. Nesse processo, exploro as etapas necessárias, desde a escolha de um sistema operacional Linux, a instalação de aplicativos como Andronix e Termux, até a configuração de inicialização automática do servidor.",
+            "subtitle": "clique aqui para ir ao medium",
+            "techsText": ""
         }
     }
     

@@ -1,0 +1,107 @@
+export function GetProjectsObject(languageJSON){
+  return {
+    "awrengenharia": {
+      title: 'AWR Engenharia',
+      MainColor: '#00487E',
+      ImageURL: [{'imagePath': '/ProjectPageImages/AWREngWide.svg', 'width': 520, 'height': 302}],
+      flexBox: 'center',
+      isSite: true,
+      textWidth: '50vw',
+      projectURL: 'https://www.awrengenhariacivil.com.br/',
+      Technologies: ['React', 'Next', 'Node', 'Figma'],
+      text: languageJSON.projects.AWR.text,
+      subtitle: languageJSON.projects.AWR.subtitle,
+      techsText: languageJSON.projects.AWR.techsText
+    },
+    "myhome": {
+      title: 'MyHome',
+      MainColor: '#00BCD4',
+      ImageURL: [{'imagePath': '/ProjectPageImages/MyHomeWide.svg', 'width': 520, 'height': 302}],
+      flexBox: 'center',
+      isSite: true,
+      textWidth: '50vw',
+      projectURL: 'https://myhome-joaomadruga.vercel.app',
+      Technologies: ['React', 'Next', 'mongoDB', 'Node', 'XD'],
+      text: languageJSON.projects.MyHome.text,
+      subtitle: languageJSON.projects.MyHome.subtitle,
+      techsText: languageJSON.projects.MyHome.techsText
+    },
+    "horadoservico": {
+      title: 'Hora do Serviço!',
+      MainColor: '#F2A54A',
+      ImageURL: [{'imagePath': '/ProjectPageImages/HoraDoServicoImg1.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/HoraDoServicoImg2.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/HoraDoServicoImg3.svg', 'width': 276, 'height': 359}],
+      textWidth: '60vw',
+      flexBox: 'space-between',
+      isSite: false,
+      Technologies: ['ReactNative', 'mongoDB', 'Node', 'Figma'],
+      text: languageJSON.projects.HoraDoServico.text,
+      subtitle: languageJSON.projects.HoraDoServico.subtitle,
+      techsText: languageJSON.projects.HoraDoServico.techsText
+    },
+    "carplit": {
+      title: 'Carplit',
+      MainColor: '#6E1DBE',
+      ImageURL: [{'imagePath': '/ProjectPageImages/CarplitSplashScreen.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/CarplitStartScreen.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/CarplitHomeScreen.svg', 'width': 276, 'height': 359}],
+      textWidth: '60vw',
+      flexBox: 'space-between',
+      isSite: true,
+      projectURL: 'https://play.google.com/store/apps/details?id=com.carplit',
+      Technologies: ['ReactNative', 'Figma'],
+      text: languageJSON.projects.Carplit.text,
+      subtitle: languageJSON.projects.Carplit.subtitle,
+      techsText: languageJSON.projects.Carplit.techsText
+    },
+    "eva": {
+      title: 'EVA',
+      MainColor: '#000000',
+      ImageURL: [{ 'imagePath': '/ProjectPageImages/EVAWide.svg', 'width': 520, 'height': 302 }],
+      flexBox: 'center',
+      isSite: true,
+      textWidth: '50vw',
+      projectURL: 'https://www.eva.art.br/',
+      Technologies: ['React', 'Next', 'Node', 'Figma'],
+      text: languageJSON.projects.EVA.text,
+      subtitle: languageJSON.projects.EVA.subtitle,
+      techsText: languageJSON.projects.EVA.techsText
+    },
+    "clust": {
+      title: 'Clust',
+      MainColor: '#1B676A',
+      ImageURL: [{'imagePath': '/ProjectPageImages/clust1.svg', 'width': 276, 'height': 338 }, {'imagePath': '/ProjectPageImages/clust_video.gif', 'width': 550, 'height': 338 }, {'imagePath': '/ProjectPageImages/clust2.svg', 'width': 276, 'height': 338 }],
+      flexBox: 'space-between',
+      isSite: true,
+      textWidth: '60vw',
+      projectURL: 'https://github.com/joaomadruga/clust',
+      Technologies: ['SwiftUI', 'Figma'],
+      text: languageJSON.projects.CLUST.text,
+      subtitle: languageJSON.projects.CLUST.subtitle,
+      techsText: languageJSON.projects.CLUST.techsText
+    },
+    "estaplit": {
+      title: 'Estaplit',
+      MainColor: '#0519D0',
+      ImageURL: [{'imagePath': '/ProjectPageImages/Estaplit1.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/Estaplit2.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/Estaplit3.svg', 'width': 276, 'height': 359}],
+      textWidth: '60vw',
+      flexBox: 'space-between',
+      isSite: true,
+      projectURL: 'https://github.com/Plit-Inc/estaplit-mobile',
+      Technologies: ['ReactNative', 'Figma', 'Django'],
+      text: languageJSON.projects.ESTAPLIT.text,
+      subtitle: languageJSON.projects.ESTAPLIT.subtitle,
+      techsText: languageJSON.projects.ESTAPLIT.techsText
+    },
+    "article-medium": {
+      title: 'Article - How to transform an unused dead display Galaxy S8 into a personal server',
+      MainColor: '#242424',
+      ImageURL: [{'imagePath': '/ProjectPageImages/medium.png', 'width': 520, 'height': 302}],
+      flexBox: 'center',
+      isSite: true,
+      textWidth: '50vw',
+      projectURL: 'https://medium.com/@joao-madruga/how-to-transform-an-unused-dead-display-galaxy-s8-into-a-personal-server-6af2160e7dbb',
+      Technologies: [],
+      text: languageJSON.projects['ARTICLE-MEDIUM'].text,
+      subtitle: languageJSON.projects['ARTICLE-MEDIUM'].subtitle,
+      techsText: languageJSON.projects['ARTICLE-MEDIUM'].techsText
+    },
+  }
+}

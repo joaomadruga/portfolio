@@ -14,8 +14,7 @@ import 'animate.css';
 import ProjectText from '../../components/ProjectsPage/ProjectText';
 import Close from '../../components/ProjectsPage/Close';
 import ProjectsLanguage from '../../components/ProjectsPage/ProjectsLanguage';
-import { GetProjectsObject } from './constants';
-import jsonTextPt from "../../public/texts-pt.json";
+import { GetProjectsObject } from '../../constants/projects/index';
 
 export default function Projects() {
     const router = useRouter();

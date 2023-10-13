@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 export default async function sendMail(req, res) {
   const { name, email, service, socialMedia, message } = await req.body;
+
   let transporter = nodemailer.createTransport({
     service: 'hotmail',
     auth: {

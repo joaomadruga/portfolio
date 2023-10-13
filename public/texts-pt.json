@@ -2,12 +2,12 @@
     "home": {
         "firstSection": {
             "title": "Olá, me chamo João!",
-            "subtitle": "Um desenvolvedor em desenvolvimento",
+            "subtitle": "Um desenvolvedor fullstack.",
             "navbar": ["História", "Projetos", "Paixão", "Contato"]
         },
         "secondSection": {
             "cardTitle": "História",
-            "text": ["Sou um desenvolvedor focado em solucionar problemas com", "criatividade", "e", " tecnologia", "Atualmente, curso Sistemas de Informação no", "Centro de informática", "da Universidade Federal de Pernambuco e busco oportunidades que me façam aprender e, consequentemente, beneficiar todo ecossistema."]
+            "text": ["Sou um desenvolvedor full stack com ampla experiência em diversas áreas, incluindo ", "mobile, frontend, backend e automação", ". Costumo me representar como ", "aventureiro de software", ", alguém que abraça novas tecnologias sem medo e acredita que as linguagens de programação são apenas ferramentas para resolução de problemas. Atualmente, estou cursando Sistemas de Informação na Universidade Federal de Pernambuco, onde continuo a aprimorar meu conjunto de habilidades."]
         },
         "thirdSection": {
             "cardTitle": "Projetos",
@@ -16,7 +16,7 @@
         },
         "fourthSection": {
             "cardTitle": "Paixão - O que me move?",
-            "text": ["Sou movido por ", "tecnologia ", "desde a infância e sempre utilizei como facilitador para as diversas ideias que tive. Diante disso, aprender a programar foi ", "libertador ", "e, enquanto aprendia, procurei desenvolver projetos que facilitam a minha vida e a das pessoas ao meu redor. Então, desenvolvi ", "sites ", "e ", "aplicativos mobile ", "'from sketch' para gerenciamento de contas, atividades da casa, etc - sempre utilizando ", "Javascript ", "em todo o processo -."]
+            "text": ["Desde a infância, a tecnologia sempre me fascinou e se tornou um facilitador para dar vida a diversas ideias criativas. Aprender a programar foi ", "libertador", " e, durante essa jornada, busquei desenvolver projetos que simplificassem não apenas a minha vida, mas também a de outras pessoas ao meu redor. Assim, criei sites e aplicativos móveis \"from scratch\" para gerenciar contas, atividades domésticas e muito mais, empregando ", "Python, Javascript e até Swift", " nas etapas do processo."]
         },
         "fifthSection": {
             "cardTitle": "Contato - Deseja me contratar?",

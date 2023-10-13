@@ -33,7 +33,7 @@ const InterestContent = styled.div`
             max-width: 100%;
             max-height: 100%;
         }
-        #logoHtml, #logoJavascript, #logoCss, #logoNextjs, #logoReactNative, #logoNodeJs, #logoReact, #logoMongodb {
+        .logo {
             transform-box: fill-box;
             transform-origin: center;
             animation: opacity;
@@ -45,7 +45,7 @@ const InterestContent = styled.div`
                 transition: all ease 200ms;
             }
         }
-        #Line1, #Line2, #Line3, #Line4, #Line5, #Line6, #Line7, #Line8, #Line9 {
+        #Line1, #Line2, #Line3, #Line4, #Line5, #Line6, #Line7, #Line8, #Line9, #Line10, #Line11, #Line12, #Line13, #Line14, #Line15, #Line16, #Line17, #Line18 {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: lineAnimation 5s linear forwards;
@@ -76,6 +76,33 @@ const InterestContent = styled.div`
         }
         #Line9{
             animation-delay: 2.1s;
+        }
+        #Line10{
+          animation-delay: 2.2s;
+        }
+        #Line11{
+          animation-delay: 2.3s;
+        }
+        #Line12{
+          animation-delay: 2.4s;
+        }
+        #Line13{
+          animation-delay: 2.5s;
+        }
+        #Line14{
+          animation-delay: 2.6s;
+        }
+        #Line15{
+          animation-delay: 2.7s;
+        }
+        #Line16{
+          animation-delay: 2.8s;
+        }
+        #Line17{
+          animation-delay: 2.9s;
+        }
+        #Line18{
+          animation-delay: 3.2s;
         }
     }
     @keyframes lineAnimation {

@@ -116,7 +116,7 @@ export default function Projects() {
             <CardProjectPage className={animation ? 'animate__animated animate__fadeInLeft': 'animate__animated animate__fadeOutLeft'} bgColor={projects[ActualProject].MainColor}>
                 <TextCard color={'white'}>{projects[ActualProject].title}</TextCard>
             </CardProjectPage>
-            <div style={{display: 'flex', width: '60vw', justifyContent: projects[ActualProject].flexBox, alignItems: 'center'}}>
+            <div style={{display: 'flex', width: '60vw', justifyContent: projects[ActualProject].flexBox, alignItems: 'center', maxWidth: 1100, gap: 20}}>
             {projects[ActualProject].ImageURL.map(function(currentImage, index){
                     return (
                     <FrameProjectPage 
@@ -127,7 +127,7 @@ export default function Projects() {
                     <BorderProjecttPage className={animation ? 'showBorder': 'hideBorder'} color={projects[ActualProject].MainColor}/>
                     <div 
                     className={animation ? 'animate__animated animate__fadeIn animate__delay-1s' : 'animate__animated animate__fadeOut'}
-                    style={{zIndex: -1, maxWidth: '100%',marginBottom: '-2px'}}
+                    style={{zIndex: -1, maxWidth: '100%',marginBottom: '-2px', padding: currentImage.isMobileImage ? 12 : 0}}
                     >
                         <Image src={currentImage.imagePath} width={currentImage.width} height={currentImage.height} quality={100} />
                     </div>
@@ -136,7 +136,7 @@ export default function Projects() {
                 })}
             </div>
             <ProjectText 
-            style={{textAlign: 'justify', width: projects[ActualProject].textWidth}}
+            style={{textAlign: 'justify', width: projects[ActualProject].textWidth, maxWidth: 1100}}
             className={animation ? 'animate__animated animate__fadeIn animate__slow': 'animate__animated animate__fadeOut animate__slow'}
             >{projects[ActualProject].text}</ProjectText>
             <TextLinkWebsite 

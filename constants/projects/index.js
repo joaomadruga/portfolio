@@ -29,7 +29,7 @@ export function GetProjectsObject(languageJSON){
     "horadoservico": {
       title: 'Hora do Serviço!',
       MainColor: '#F2A54A',
-      ImageURL: [{'imagePath': '/ProjectPageImages/HoraDoServicoImg1.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/HoraDoServicoImg2.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/HoraDoServicoImg3.svg', 'width': 276, 'height': 359}],
+      ImageURL: [{'imagePath': '/ProjectPageImages/HoraDoServicoImg1.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/HoraDoServicoImg2.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/HoraDoServicoImg3.svg', 'width': 276, 'height': 359, 'isMobileImage': true}],
       textWidth: '60vw',
       flexBox: 'space-between',
       isSite: false,
@@ -41,7 +41,7 @@ export function GetProjectsObject(languageJSON){
     "carplit": {
       title: 'Carplit',
       MainColor: '#6E1DBE',
-      ImageURL: [{'imagePath': '/ProjectPageImages/CarplitSplashScreen.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/CarplitStartScreen.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/CarplitHomeScreen.svg', 'width': 276, 'height': 359}],
+      ImageURL: [{'imagePath': '/ProjectPageImages/CarplitSplashScreen.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/CarplitStartScreen.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/CarplitHomeScreen.svg', 'width': 276, 'height': 359, 'isMobileImage': true}],
       textWidth: '60vw',
       flexBox: 'space-between',
       isSite: true,
@@ -67,7 +67,7 @@ export function GetProjectsObject(languageJSON){
     "clust": {
       title: 'Clust',
       MainColor: '#1B676A',
-      ImageURL: [{'imagePath': '/ProjectPageImages/clust1.svg', 'width': 276, 'height': 338 }, {'imagePath': '/ProjectPageImages/clust_video.gif', 'width': 550, 'height': 338 }, {'imagePath': '/ProjectPageImages/clust2.svg', 'width': 276, 'height': 338 }],
+      ImageURL: [{'imagePath': '/ProjectPageImages/clust1.svg', 'width': 276, 'height': 338, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/clust_video.gif', 'width': 550, 'height': 338 }, {'imagePath': '/ProjectPageImages/clust2.svg', 'width': 276, 'height': 338, 'isMobileImage': true }],
       flexBox: 'space-between',
       isSite: true,
       textWidth: '60vw',
@@ -80,7 +80,7 @@ export function GetProjectsObject(languageJSON){
     "estaplit": {
       title: 'Estaplit',
       MainColor: '#0519D0',
-      ImageURL: [{'imagePath': '/ProjectPageImages/Estaplit1.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/Estaplit2.svg', 'width': 276, 'height': 359}, {'imagePath': '/ProjectPageImages/Estaplit3.svg', 'width': 276, 'height': 359}],
+      ImageURL: [{'imagePath': '/ProjectPageImages/Estaplit1.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/Estaplit2.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/Estaplit3.svg', 'width': 276, 'height': 359, 'isMobileImage': true}],
       textWidth: '60vw',
       flexBox: 'space-between',
       isSite: true,

@@ -2,12 +2,12 @@
     "home": {
         "firstSection": {
             "title": "Hi, i'm João!",
-            "subtitle": "A developer in development",
+            "subtitle": "A fullstack developer.",
             "navbar": ["History", "Projects", "Passion", "Contact"]
         },
         "secondSection": {
             "cardTitle": "History",
-            "text": ["I'm a developer focused on problems solution with", "criativity", "and", "technology", "Currently, i'm a Information Systems student in ", "Centro de Informática", "from University Federal of Pernambuco and i'm always open to oportunities that makes me learn and, consequently, benefit all ecosystem."]
+            "text": ["I'm a full-stack developer with extensive experience in various areas, including ", "mobile, frontend, backend, and automation development", ". I often describe myself as an ", "software discoverer", ", someone who embraces new technologies without fear and believes that programming languages are just tools for problem-solving. Currently, I am studying Information Systems at the Federal University of Pernambuco, where I continue to enhance my skill set."]
         },
         "thirdSection": {
             "cardTitle": "Projects",
@@ -16,7 +16,7 @@
         },
         "fourthSection": {
             "cardTitle": "Passion - What moves me?",
-            "text": ["I'm moved to", "technology ", "since my childhood and always used as a facilitator to the various ideas that I had. That said, learning to programming was ", "emancipator ", "and, while I was learning, I've tried to develop projects that facilitated day-to-day situations. So, I've developed ", "websites ", "and ", "mobile apps ", "from sketch to manage bill, home activities, always using ", "Javascript ", "in all process."]
+            "text": ["Since childhood, technology has always fascinated me and has become a facilitator for bringing various creative ideas to life. Learning to program was a source of ", "freedom", " and, during this journey, I sought to develop projects that simplified not only my life but also the lives of others around me. Thus, I created websites and mobile applications from scratch to manage accounts, household activities, and more, using ", "Python, Javascript, and even Swift", " in the process."]
         },
         "fifthSection": {
             "cardTitle": "Contact - Want to hire me?",

@@ -80,7 +80,7 @@ export function GetProjectsObject(languageJSON){
     "estaplit": {
       title: 'Estaplit',
       MainColor: '#0519D0',
-      ImageURL: [{'imagePath': '/ProjectPageImages/Estaplit1.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/Estaplit2.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/Estaplit3.svg', 'width': 276, 'height': 359, 'isMobileImage': true}],
+      ImageURL: [{'imagePath': '/ProjectPageImages/estaplit1.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/estaplit2.svg', 'width': 276, 'height': 359, 'isMobileImage': true}, {'imagePath': '/ProjectPageImages/estaplit3.svg', 'width': 276, 'height': 359, 'isMobileImage': true}],
       textWidth: '60vw',
       flexBox: 'space-between',
       isSite: true,
